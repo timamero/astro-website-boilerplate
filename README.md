@@ -6,6 +6,7 @@
 | ---------- | ------------------ |
 | AstroJS    | Frontend Framework |
 | ESLint     | Linting            |
+| Stylelint  | CSS Linting        |
 
 ### Resources for installing tech stack
 
@@ -14,3 +15,5 @@
 [eslint-plugin-astro](https://github.com/ota-meshi/eslint-plugin-astro)
 
 [Get VSCode, eslint & prettier working with Astro](https://patheticgeek.dev/blog/astro-prettier-eslint-vscode)
+
+[stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html)
