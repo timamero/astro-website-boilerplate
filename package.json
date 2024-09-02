@@ -8,8 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint --ext .js,.astro src",
-    "stylelint": "npx stylelint '**/*.{css,js,astro}'"
+    "lint": "npx eslint src",
+    "stylelint": "npx stylelint '**/*.{css,ts,astro}'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
