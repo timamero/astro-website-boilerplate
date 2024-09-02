@@ -1,6 +1,9 @@
-{ "extends": [
-    "stylelint-config-standard", 
-    "stylelint-config-html", 
+{ "extends": [ 
+    "stylelint-config-html/html",
     "stylelint-config-html/astro"
-  ]
+  ],
+  "ignoreFiles": ["**/*.ts"],
+  "rules": {
+    "block-no-empty": true
+  }
 }
