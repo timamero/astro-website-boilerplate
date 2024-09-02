@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "npx eslint src",
-    "stylelint": "npx stylelint '**/*.{css,ts,astro}'"
+    "stylelint": "npx stylelint 'src/**/*.{css,ts,astro}'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -23,7 +23,6 @@
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "postcss-html": "^1.7.0",
     "stylelint": "^16.9.0",
-    "stylelint-config-html": "^1.1.0",
-    "stylelint-config-standard": "^36.0.1"
+    "stylelint-config-html": "^1.1.0"
   }
 }
