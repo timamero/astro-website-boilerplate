@@ -17,3 +17,5 @@
 [Get VSCode, eslint & prettier working with Astro](https://patheticgeek.dev/blog/astro-prettier-eslint-vscode)
 
 [stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html)
+
+[stylelint: Getting started](https://stylelint.io/user-guide/get-started)
