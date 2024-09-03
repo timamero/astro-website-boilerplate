@@ -9,7 +9,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "npx eslint src",
-    "stylelint": "npx stylelint 'src/**/*.{css,ts,astro}'"
+    "stylelint": "npx stylelint 'src/**/*.{css,ts,astro}'",
+    "format:check": "prettier \"src/**/*.{css,ts,astro}\" --check",
+    "format": "prettier \"src/**/*.{css,ts,astro}\" --write"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -22,6 +24,8 @@
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "postcss-html": "^1.7.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
     "stylelint": "^16.9.0",
     "stylelint-config-html": "^1.1.0"
   }
