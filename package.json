@@ -11,7 +11,11 @@
     "lint": "npx eslint src",
     "stylelint": "npx stylelint 'src/**/*.{css,ts,astro}'",
     "format:check": "prettier \"src/**/*.{css,ts,astro}\" --check",
-    "format": "prettier \"src/**/*.{css,ts,astro}\" --write"
+    "format": "prettier \"src/**/*.{css,ts,astro}\" --write",
+    "netlify": "netlify",
+    "netlify:status": "netlify status",
+    "netlify:admin": "netlify open:admin",
+    "netlify:site": "netlify open:site"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",

@@ -7,6 +7,27 @@
 | AstroJS    | Frontend Framework |
 | ESLint     | Linting            |
 | Stylelint  | CSS Linting        |
+| Prettier   | Formatting         |
+| Netlify    | Deployment         |
+
+## Getting Started
+
+### Install packages
+
+`npm run install`
+
+### Next, set up Netlify continuous deployment.
+
+1. Connect your repository
+
+   `netlify init`
+
+2. Select Create & configure a new site.
+3. Select Team.
+4. Input site name.
+5. Confirm build command (npm run build).
+6. Confirm directory to deploy.
+7. Confirm creation of netlify.toml.
 
 ### Resources for installing tech stack
 
