@@ -21,3 +21,5 @@
 [stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html)
 
 [stylelint: Getting started](https://stylelint.io/user-guide/get-started)
+
+[Netlify](https://docs.netlify.com/cli/get-started/)
