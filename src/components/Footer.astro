@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/triangle-svgrepo-com.png';
+---
+
+<footer class="footer flex">
+  <div>
+    <Image class="logo" src={logo} alt="logo image" width="40" />
+  </div>
+  <p>Created by Fatima Camero</p>
+</footer>
+
+<style>
+  .footer {
+    justify-content: space-between;
+    padding-block: 2rem;
+    padding-inline: clamp(0.5rem, 50vw, 5rem);
+  }
+</style>
