@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -15,14 +16,15 @@ body {
   color: #263238;
   font-family: 'Nimbus Mono PS', 'Courier New', monospace;
   font-weight: normal;
+  flex-direction: column;
+
+  min-height: 100%;
 
   overflow-x: hidden;
-
-  height: 2000px; /* temp style to test fixed nav */
 }
 
 main {
-  height: 100%;
+  flex-grow: 1;
 }
 
 ul {
@@ -38,9 +40,6 @@ a {
 
 button {
   border: 0;
-  /* border-radius: 0.25rem; */
-  /* color: white; */
   text-decoration: none;
-  /* padding: 0.25rem 0.5rem; */
   cursor: pointer;
 }

@@ -2,13 +2,16 @@
 import '../styles/utils.css';
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
 
 import content from '../content/pages/landing.json';
 ---
 
 <Layout title={content.title} description={content.headline}>
-  <h1 class="title">{content.title}</h1>
-  <p class="headline">{content.headline}</p>
+  <Container>
+    <h1 class="title">{content.title}</h1>
+    <p class="headline">{content.headline}</p>
+  </Container>
 </Layout>
 
 <script>
