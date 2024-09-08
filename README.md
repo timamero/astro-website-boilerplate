@@ -9,6 +9,7 @@
 | Stylelint  | CSS Linting        |
 | Prettier   | Formatting         |
 | Netlify    | Deployment         |
+| AstroSEO   | SEO Plugin         |
 
 ## Getting Started
 
@@ -44,6 +45,8 @@
 [stylelint: Getting started](https://stylelint.io/user-guide/get-started)
 
 [Netlify](https://docs.netlify.com/cli/get-started/)
+
+[astro-seo](https://github.com/jonasmerlin/astro-seo)
 
 ## Development References and Resources
 
