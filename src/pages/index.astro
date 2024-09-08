@@ -2,11 +2,15 @@
 import '../styles/utils.css';
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
+
+const title = 'Astro Website Boilerplate';
+const headline = 'A bare bones Astro template.';
 ---
 
 <Layout title="Astro Website Boilerplate">
   <main>
-    <h1 class="title">Astro Website Boilerplate</h1>
+    <h1 class="title">{title}</h1>
+    <p class="headline">{headline}</p>
   </main>
 </Layout>
 
@@ -28,6 +32,10 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .title {
     margin-top: 4rem;
+    text-align: center;
+  }
+
+  .headline {
     text-align: center;
   }
 </style>
