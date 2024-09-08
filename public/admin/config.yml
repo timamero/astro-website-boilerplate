@@ -7,9 +7,9 @@ collections:
     files:
       - label: 'Landing Page'
         name: 'landing'
-        file: 'src/pages/index.astro' # The path to the folder where the documents are stored
+        file: 'src/content/pages/landing.json' # The path to the folder where the documents are stored
         fields: # The fields for each document, usually in frontmatter
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Headline', name: 'headline', widget: 'markdown' }
+          - { label: 'Headline', name: 'headline', widget: 'string' }
 media_folder: 'src/assets/images' # Location where files will be stored in the repo
 public_folder: 'src/assets/images' # The src attribute for uploaded media
