@@ -10,6 +10,7 @@
 | Prettier   | Formatting         |
 | Netlify    | Deployment         |
 | AstroSEO   | SEO Plugin         |
+| Decap CMS  | Content Management |
 
 ## Getting Started
 
@@ -47,6 +48,14 @@
 [Netlify](https://docs.netlify.com/cli/get-started/)
 
 [astro-seo](https://github.com/jonasmerlin/astro-seo)
+
+[Decap CMS & Astro](https://docs.astro.build/en/guides/cms/decap-cms/)
+
+[netlify-identity-widget](https://github.com/netlify/netlify-identity-widget)
+
+[Configure Decap CMS](https://decapcms.org/docs/configure-decap-cms/)
+
+[netlifydocs: Reconnect after changing repository permissions](https://docs.netlify.com/security/secure-access-to-sites/git-gateway/#reconnect-after-changing-repository-permissions)
 
 ## Development References and Resources
 
