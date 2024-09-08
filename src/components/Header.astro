@@ -1,15 +1,41 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/triangle-svgrepo-com.png';
+import hamburgerMenu from '../assets/hamburger-menu-more-svgrepo-com.svg';
+import close from '../assets/close-round-svgrepo-com.svg';
 ---
 
-<!-- https://www.youtube.com/watch?v=HbBMp6yUXO0 -->
+<!-- 41:33 -->
 <header class="primary-header flex">
   <div>
     <Image class="logo" src={logo} alt="logo image" width="40" />
   </div>
+
+  <button
+    class="mobile-nav-toggle"
+    aria-controls="primary-navigation"
+    aria-expanded="false"
+    ><span class="sr-only">Menu</span>
+    <Image
+      class="menu-icon"
+      data-visible="true"
+      src={hamburgerMenu}
+      alt="Menu icon"
+    />
+    <Image
+      class="close-icon"
+      data-visible="false"
+      src={close}
+      alt="Close icon"
+    />
+  </button>
+
   <nav>
-    <ul id="primary-navigation" class="primary-navigation flex">
+    <ul
+      id="primary-navigation"
+      data-visible="false"
+      class="primary-navigation flex"
+    >
       <li class="active">
         <a class="text-dark" href="index.html"> Home </a>
       </li>
@@ -26,6 +52,31 @@ import logo from '../assets/triangle-svgrepo-com.png';
   </nav>
 </header>
 
+<script>
+  const primaryNav = document.querySelector(
+    '.primary-navigation',
+  ) as HTMLElement;
+  const navToggle = document.querySelector('.mobile-nav-toggle') as HTMLElement;
+  const menuIcon = document.querySelector('.menu-icon') as HTMLElement;
+  const closeIcon = document.querySelector('.close-icon') as HTMLElement;
+
+  navToggle.addEventListener('click', () => {
+    const visibility = primaryNav.getAttribute('data-visible') as string;
+
+    if (visibility === 'false') {
+      primaryNav.setAttribute('data-visible', 'true');
+      navToggle.setAttribute('aria-expanded', 'true');
+      menuIcon.setAttribute('data-visible', 'false');
+      closeIcon.setAttribute('data-visible', 'true');
+    } else {
+      primaryNav.setAttribute('data-visible', 'false');
+      navToggle.setAttribute('aria-expanded', 'false');
+      menuIcon.setAttribute('data-visible', 'true');
+      closeIcon.setAttribute('data-visible', 'false');
+    }
+  });
+</script>
+
 <style>
   .logo {
     margin: 2rem;
@@ -37,7 +88,80 @@ import logo from '../assets/triangle-svgrepo-com.png';
     justify-content: space-between;
   }
 
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+  .primary-navigation {
+    background: rgb(255, 224, 179, 0.95);
+  }
+
+  @supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+      background: rgb(255, 224, 179, 0.3);
+      backdrop-filter: blur(1rem);
+    }
+  }
+
   .primary-navigation a {
     letter-spacing: 0.2rem;
+  }
+
+  @media (max-width: 35em) {
+    .primary-navigation {
+      gap: 2em;
+
+      position: fixed;
+      z-index: 1000;
+      inset: 0 0 0 30%;
+
+      flex-direction: column;
+      padding: min(30vh, 10rem) 2em;
+
+      transform: translateX(100%);
+      transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible='true'] {
+      transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+      position: absolute;
+      z-index: 9999;
+      background: transparent;
+      width: 2rem;
+      aspect-ratio: 1; /* width and height are the same */
+
+      top: 2rem;
+      right: 2rem;
+
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .mobile-nav-toggle img {
+      width: inherit;
+      height: inherit;
+    }
+
+    .menu-icon[data-visible='true'],
+    .close-icon[data-visible='true'] {
+      display: block;
+    }
+
+    .menu-icon[data-visible='false'],
+    .close-icon[data-visible='false'] {
+      display: none;
+    }
+  }
+
+  @media (min-width: 35em) {
+    .primary-navigation {
+      gap: 3em;
+      padding-block: 2rem;
+      padding-inline: clamp(3rem, 10vw, 10rem);
+    }
   }
 </style>

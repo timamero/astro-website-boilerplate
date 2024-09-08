@@ -44,3 +44,9 @@
 [stylelint: Getting started](https://stylelint.io/user-guide/get-started)
 
 [Netlify](https://docs.netlify.com/cli/get-started/)
+
+## Development References and Resources
+
+[Responsive navbar tutorial using HTML CSS & JS](https://www.youtube.com/watch?v=HbBMp6yUXO0)
+
+[Material Design Color Chart](https://htmlcolorcodes.com/color-chart/material-design-color-chart/)
