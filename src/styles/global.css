@@ -16,7 +16,9 @@ body {
   color: #263238;
   font-family: 'Nimbus Mono PS', 'Courier New', monospace;
   font-weight: normal;
+
   flex-direction: column;
+  gap: 0rem !important;
 
   min-height: 100%;
 
@@ -31,6 +33,10 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
 }
 
 a {

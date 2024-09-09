@@ -11,8 +11,12 @@ import content from '../content/pages/landing.json';
 
 <Layout title={content.title} description={content.headline}>
   <Container>
-    <h1 class="title">{content.title}</h1>
-    <p class="headline">{content.headline}</p>
+    <section class="hero-section flex">
+      <div class="content">
+        <h1 class="title">{content.title}</h1>
+        <p class="headline">{content.headline}</p>
+      </div>
+    </section>
   </Container>
 </Layout>
 
@@ -33,15 +37,36 @@ import content from '../content/pages/landing.json';
   }
 
   gsap.fromTo('.title', { opacity: 0 }, { opacity: 1, duration: 2 });
+  gsap.fromTo(
+    '.headline',
+    { opacity: 0 },
+    { opacity: 1, duration: 1, delay: 1.25 },
+  );
 </script>
 
 <style>
-  .title {
-    margin-top: 4rem;
+  .hero-section {
+    height: calc(100vh - 113px);
+
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .content {
+    width: 100%;
+
+    transform: translateY(-54%);
+  }
+
+  .title,
+  .headline {
     text-align: center;
   }
 
-  .headline {
-    text-align: center;
+  .title {
+    font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+    font-weight: 800;
+
+    margin-bottom: 4px;
   }
 </style>

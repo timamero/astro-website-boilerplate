@@ -55,6 +55,8 @@ import close from '../assets/close-round-svgrepo-com.svg';
 </div>
 
 <script>
+  import gsap from 'gsap';
+
   const primaryNav = document.querySelector(
     '.primary-navigation',
   ) as HTMLElement;
@@ -77,6 +79,12 @@ import close from '../assets/close-round-svgrepo-com.svg';
       closeIcon.setAttribute('data-visible', 'false');
     }
   });
+
+  gsap.fromTo(
+    '.primary-header',
+    { opacity: 0 },
+    { opacity: 1, duration: 1, delay: 1.25 },
+  );
 </script>
 
 <style>
