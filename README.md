@@ -11,6 +11,7 @@
 | Netlify    | Deployment         |
 | AstroSEO   | SEO Plugin         |
 | Decap CMS  | Content Management |
+| gsap       | Animation          |
 
 ## Getting Started
 
@@ -50,6 +51,7 @@
 - [netlify-identity-widget](https://github.com/netlify/netlify-identity-widget)
 - [Configure Decap CMS](https://decapcms.org/docs/configure-decap-cms/)
 - [netlifydocs: Reconnect after changing repository permissions](https://docs.netlify.com/security/secure-access-to-sites/git-gateway/#reconnect-after-changing-repository-permissions)
+- [gsap: Get Started](https://gsap.com/docs/v3/Installation/?tab=npm&module=esm&method=private+registry&tier=free&club=false&require=false&trial=true)
 
 ## Development References and Resources
 
