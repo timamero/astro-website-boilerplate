@@ -39,9 +39,19 @@ h1 {
   font-size: 2.5em;
 }
 
+h1, h2 {
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  font-weight: 800;
+  letter-spacing: .1rem;
+}
+
 a {
   text-decoration: none;
   color: #801A00;
+}
+
+p {
+  letter-spacing: 1px;
 }
 
 button {
