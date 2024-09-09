@@ -5,6 +5,8 @@ import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 
 import content from '../content/pages/landing.json';
+
+// import gsap from 'gsap';
 ---
 
 <Layout title={content.title} description={content.headline}>
@@ -15,6 +17,8 @@ import content from '../content/pages/landing.json';
 </Layout>
 
 <script>
+  import gsap from 'gsap';
+
   // @ts-ignore
   if (window.netlifyIdentity) {
     // @ts-ignore
@@ -27,6 +31,8 @@ import content from '../content/pages/landing.json';
       }
     });
   }
+
+  gsap.fromTo('.title', { opacity: 0 }, { opacity: 1, duration: 2 });
 </script>
 
 <style>
