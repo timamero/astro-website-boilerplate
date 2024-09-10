@@ -11,7 +11,7 @@
 | Netlify    | Deployment         |
 | AstroSEO   | SEO Plugin         |
 | Decap CMS  | Content Management |
-| gsap       | Animation          |
+| GSAP       | Animation          |
 
 ## Getting Started
 
