@@ -66,4 +66,5 @@ button {
   border: 0;
   text-decoration: none;
   cursor: pointer;
+  font-family: inherit;
 }

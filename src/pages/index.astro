@@ -3,6 +3,7 @@ import '../styles/utils.css';
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
 
 import content from '../content/pages/landing.json';
 
@@ -29,6 +30,12 @@ import content from '../content/pages/landing.json';
         <li class="list-item">Decamp CMS</li>
         <li class="list-item">GSAP</li>
       </ul>
+    </section>
+    <section class="github-section flex">
+      <Button
+        label="View project on Github"
+        url="https://github.com/timamero/astro-website-boilerplate"
+      />
     </section>
   </Container>
 </Layout>
@@ -67,12 +74,29 @@ import content from '../content/pages/landing.json';
 </script>
 
 <style>
+  /* Hero styles */
   .hero-section {
     height: calc(100vh - 113px);
 
     align-items: center;
   }
 
+  .title,
+  .headline {
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 4px;
+  }
+
+  .content {
+    width: 100%;
+
+    transform: translateY(-54%);
+  }
+
+  /* Tech styles */
   .tech-section {
     flex-direction: column;
     align-items: center;
@@ -93,18 +117,10 @@ import content from '../content/pages/landing.json';
     opacity: 0;
   }
 
-  .content {
-    width: 100%;
+  /* Github styles */
+  .github-section {
+    margin-block: clamp(4rem, 30vh, 20rem);
 
-    transform: translateY(-54%);
-  }
-
-  .title,
-  .headline {
-    text-align: center;
-  }
-
-  .title {
-    margin-bottom: 4px;
+    justify-content: center;
   }
 </style>
