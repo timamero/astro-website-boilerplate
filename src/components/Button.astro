@@ -15,11 +15,16 @@ const { label, url } = Astro.props;
 
 <script>
   import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
 
   gsap.to('.button', {
-    scrollTrigger: '.button',
-    start: 'top 80%',
-    end: 'bottom 70%',
+    scrollTrigger: {
+      trigger: '.button',
+      start: 'top 80%',
+      end: 'bottom 70%',
+    },
     y: 0,
     opacity: 1,
     duration: 1,
