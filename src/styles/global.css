@@ -33,6 +33,12 @@ section {
   padding-block: 4rem;
 }
 
+section:first-of-type {
+  height: calc(100vh - 113px);
+  align-items: center;
+
+}
+
 ul {
   list-style-type: none;
   padding: 0;
