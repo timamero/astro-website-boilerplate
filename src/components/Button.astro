@@ -7,24 +7,45 @@ interface Props {
 const { label, url } = Astro.props;
 ---
 
-<a href={url} class="button">
-  {label}
-</a>
+<div class="button-container">
+  <a href={url} class="button">
+    {label}
+  </a>
+</div>
+
+<script>
+  import { gsap } from 'gsap';
+
+  gsap.to('.button', {
+    scrollTrigger: '.button',
+    start: 'top 80%',
+    end: 'bottom 70%',
+    y: 0,
+    opacity: 1,
+    duration: 1,
+  });
+</script>
 
 <style>
+  .button-container {
+    display: flex;
+    overflow: hidden;
+  }
+
   .button {
     font-size: 1.5em;
     color: inherit;
 
-    padding-block: 1rem;
+    padding-block: 1.3rem 1rem;
     padding-inline: 2rem;
 
     border-radius: 8px;
     background-color: rgb(255, 224, 179, 0.3);
 
-    /* transform: translateY(0px); */
-
     transition: all 350ms ease-out;
+
+    transform: translateY(3rem);
+    opacity: 0;
   }
 
   .button:hover {
