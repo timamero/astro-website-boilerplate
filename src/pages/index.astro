@@ -44,6 +44,8 @@ import content from '../content/pages/landing.json';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+  gsap.registerPlugin(ScrollTrigger);
+
   // @ts-ignore
   if (window.netlifyIdentity) {
     // @ts-ignore
@@ -58,12 +60,12 @@ import content from '../content/pages/landing.json';
   }
 
   gsap.fromTo('.title', { opacity: 0 }, { opacity: 1, duration: 2 });
+
   gsap.fromTo(
     '.headline',
     { opacity: 0 },
     { opacity: 1, duration: 1, delay: 1.25 },
   );
-  gsap.registerPlugin(ScrollTrigger);
 
   ScrollTrigger.batch('.list-item', {
     start: 'top 80%',
@@ -113,7 +115,10 @@ import content from '../content/pages/landing.json';
 
     padding-block: 0.5rem;
 
-    transform: translate(3rem, 3rem);
+    overflow: hidden;
+
+    /* inital styles before animation */
+    transform: translateY(2rem);
     opacity: 0;
   }
 
