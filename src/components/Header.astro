@@ -6,7 +6,7 @@ import hamburgerMenu from '../assets/hamburger-menu-more-svgrepo-com.svg';
 import close from '../assets/close-round-svgrepo-com.svg';
 ---
 
-<div class="header-container">
+<div class="header-container" transition:persist>
   <header class="primary-header flex">
     <div>
       <Image class="logo" src={logo} alt="logo image" width="40" />
@@ -37,16 +37,16 @@ import close from '../assets/close-round-svgrepo-com.svg';
         data-visible="false"
         class="primary-navigation flex"
       >
-        <li class="active">
+        <li class="active nav-link">
           <a class="text-dark" href="/"> Home </a>
         </li>
-        <li class="active">
+        <li class="active nav-link">
           <a class="text-dark" href="/about"> About </a>
         </li>
-        <li class="active">
+        <li class="active nav-link">
           <a class="text-dark" href="/blog"> Blog </a>
         </li>
-        <li class="active">
+        <li class="active nav-link">
           <a class="text-dark" href="/contact"> Contact </a>
         </li>
       </ul>
@@ -63,6 +63,7 @@ import close from '../assets/close-round-svgrepo-com.svg';
   const navToggle = document.querySelector('.mobile-nav-toggle') as HTMLElement;
   const menuIcon = document.querySelector('.menu-icon') as HTMLElement;
   const closeIcon = document.querySelector('.close-icon') as HTMLElement;
+  const links = document.querySelectorAll('.nav-link') as NodeList;
 
   navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible') as string;
@@ -78,6 +79,18 @@ import close from '../assets/close-round-svgrepo-com.svg';
       menuIcon.setAttribute('data-visible', 'true');
       closeIcon.setAttribute('data-visible', 'false');
     }
+  });
+
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const visibility = primaryNav.getAttribute('data-visible') as string;
+      if (visibility === 'true') {
+        primaryNav.setAttribute('data-visible', 'false');
+        navToggle.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('data-visible', 'true');
+        closeIcon.setAttribute('data-visible', 'false');
+      }
+    });
   });
 
   gsap.fromTo(
