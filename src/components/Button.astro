@@ -19,15 +19,17 @@ const { label, url } = Astro.props;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to('.button', {
-    scrollTrigger: {
-      trigger: '.button',
-      start: 'top 80%',
-      end: 'bottom 70%',
-    },
-    y: 0,
-    opacity: 1,
-    duration: 1,
+  document.addEventListener('astro:page-load', () => {
+    gsap.to('.button', {
+      scrollTrigger: {
+        trigger: '.button',
+        start: 'top 80%',
+        end: 'bottom 70%',
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    });
   });
 </script>
 

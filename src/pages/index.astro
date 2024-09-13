@@ -54,26 +54,28 @@ import content from '../content/pages/landing.json';
       }
     });
   }
-  // after adding view transitions, the animations do not work, make need to put persist attribute
 
-  document.addEventListener('DOMContentLoaded', function (event) {
-    // wait until window, stylesheets, images, links, and other media assets are loaded
-    window.onload = function () {
-      gsap.fromTo('.title', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 });
+  gsap.config({
+    nullTargetWarn: false,
+  });
 
-      gsap.fromTo(
-        '.headline',
-        { autoAlpha: 0 },
-        { autoAlpha: 1, duration: 1, delay: 1.25 },
-      );
+  document.addEventListener('astro:page-load', () => {
+    gsap.fromTo('.title', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 });
 
-      ScrollTrigger.batch('.list-item', {
-        start: 'top 80%',
-        end: 'bottom 70%',
-        onEnter: (batch) =>
-          gsap.to(batch, { opacity: 1, x: 0, y: 0, stagger: 0.15 }),
-      });
-    };
+    gsap.fromTo(
+      '.headline',
+      { autoAlpha: 0 },
+      { autoAlpha: 1, duration: 1, delay: 1.25 },
+    );
+
+    gsap.set('.list-item', { x: 0, y: 50, opacity: 0 });
+
+    ScrollTrigger.batch('.list-item', {
+      start: 'top 80%',
+      end: 'bottom 70%',
+      onEnter: (batch) =>
+        gsap.to(batch, { opacity: 1, x: 0, y: 0, stagger: 0.15 }),
+    });
   });
 </script>
 
@@ -112,10 +114,6 @@ import content from '../content/pages/landing.json';
     padding-block: 0.5rem;
 
     overflow: hidden;
-
-    /* inital styles before animation */
-    transform: translateY(2rem);
-    opacity: 0;
   }
 
   /* Github styles */
