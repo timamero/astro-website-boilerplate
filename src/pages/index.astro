@@ -54,35 +54,35 @@ import content from '../content/pages/landing.json';
       }
     });
   }
+  // after adding view transitions, the animations do not work, make need to put persist attribute
 
-  gsap.fromTo('.title', { opacity: 0 }, { opacity: 1, duration: 2 });
+  document.addEventListener('DOMContentLoaded', function (event) {
+    // wait until window, stylesheets, images, links, and other media assets are loaded
+    window.onload = function () {
+      gsap.fromTo('.title', { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 });
 
-  gsap.fromTo(
-    '.headline',
-    { opacity: 0 },
-    { opacity: 1, duration: 1, delay: 1.25 },
-  );
+      gsap.fromTo(
+        '.headline',
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 1, delay: 1.25 },
+      );
 
-  ScrollTrigger.batch('.list-item', {
-    start: 'top 80%',
-    end: 'bottom 70%',
-    onEnter: (batch) =>
-      gsap.to(batch, { opacity: 1, x: 0, y: 0, stagger: 0.15 }),
+      ScrollTrigger.batch('.list-item', {
+        start: 'top 80%',
+        end: 'bottom 70%',
+        onEnter: (batch) =>
+          gsap.to(batch, { opacity: 1, x: 0, y: 0, stagger: 0.15 }),
+      });
+    };
   });
 </script>
 
 <style>
   /* Hero styles */
-  /* .hero-section {
-    height: calc(100vh - 113px);
-
-    align-items: center;
-  } */
-
-  /* .title,
-  .headline {
-    text-align: center;
-  } */
+  .headline,
+  .title {
+    visibility: hidden;
+  }
 
   .title {
     margin-bottom: 4px;

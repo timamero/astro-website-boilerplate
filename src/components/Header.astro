@@ -95,8 +95,8 @@ import close from '../assets/close-round-svgrepo-com.svg';
 
   gsap.fromTo(
     '.primary-header',
-    { opacity: 0 },
-    { opacity: 1, duration: 1, delay: 1.25 },
+    { autoAlpha: 0 },
+    { autoAlpha: 1, duration: 1, delay: 1.25 },
   );
 </script>
 
@@ -115,8 +115,9 @@ import close from '../assets/close-round-svgrepo-com.svg';
   .primary-header {
     align-items: center;
     justify-content: space-between;
-    /* flex-grow: 1; */
     width: 100%;
+
+    visibility: hidden;
   }
 
   .mobile-nav-toggle {
