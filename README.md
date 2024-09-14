@@ -57,3 +57,4 @@
 
 - [Responsive navbar tutorial using HTML CSS & JS](https://www.youtube.com/watch?v=HbBMp6yUXO0)
 - [Material Design Color Chart](https://htmlcolorcodes.com/color-chart/material-design-color-chart/)
+- [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/)
