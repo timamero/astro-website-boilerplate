@@ -17,7 +17,7 @@
 
 ### Install packages
 
-`npm run install`
+`npm install`
 
 ### Next, set up Netlify continuous deployment
 
