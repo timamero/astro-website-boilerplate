@@ -42,19 +42,6 @@ import content from '../content/pages/landing.json';
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // @ts-ignore
-  if (window.netlifyIdentity) {
-    // @ts-ignore
-    window.netlifyIdentity.on('init', (user) => {
-      if (!user) {
-        // @ts-ignore
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      }
-    });
-  }
-
   gsap.config({
     nullTargetWarn: false,
   });
