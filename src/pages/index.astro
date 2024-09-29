@@ -58,6 +58,7 @@ import content from '../content/pages/landing.json';
     gsap.set('.list-item', { x: 0, y: 50, opacity: 0 });
 
     ScrollTrigger.batch('.list-item', {
+      scroller: '.scrollable',
       start: 'top 80%',
       end: 'bottom 70%',
       onEnter: (batch) =>

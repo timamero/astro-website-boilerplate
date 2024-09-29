@@ -60,16 +60,27 @@ const { title, description } = Astro.props;
       type="text/javascript"
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body class="flex">
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+  <body>
+    <div class="scrollable">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
 
 <script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('astro:page-load', () => {
+    ScrollTrigger.refresh();
+  });
+
   // @ts-ignore
   if (window.netlifyIdentity) {
     // @ts-ignore

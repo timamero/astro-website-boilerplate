@@ -22,6 +22,7 @@ const { label, url } = Astro.props;
   document.addEventListener('astro:page-load', () => {
     gsap.to('.button', {
       scrollTrigger: {
+        scroller: '.scrollable',
         trigger: '.button',
         start: 'top 80%',
         end: 'bottom 70%',

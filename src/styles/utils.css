@@ -3,6 +3,11 @@
   gap: 1rem;
 }
 
+.scrollable {
+  height: 100vh;
+  overflow-y: auto;
+}
+
 .text-dark {
   color: #263238;
 }
